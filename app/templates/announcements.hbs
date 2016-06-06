@@ -1,0 +1,5 @@
+<ul>
+  {{#each model.announcements as |announcement|}}
+     {{announcement-tile announcement=announcement destroyAnnouncement="destroyAnnouncement"}}
+  {{/each}}
+</ul>
