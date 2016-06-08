@@ -3,16 +3,28 @@
 We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
+  <h3>Announcements</h3>
   {{#each model.announcements as |announcement|}}
      {{announcement-tile announcement=announcement destroyAnnouncement="destroyAnnouncement"}}
   {{/each}}
 </ul>
+<hr>
 
 <ul>
+  <h3>Rental Listing</h3>
   {{#each model.rentals as |rental|}}
      {{rental-tile rental=rental}}
   {{/each}}
 </ul>
+<hr>
+
+<ul>
+  <h3>City Listing</h3>
+  {{#each model.cities as |city|}}
+     {{city.name}}<br>
+  {{/each}}
+</ul>
+<hr>
 
 {{new-rental save2="save3"}}
 {{new-announcement announcementSave="announcementSave"}}
