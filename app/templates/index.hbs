@@ -21,11 +21,12 @@ We hope you find exactly what you're looking for in a place to stay.
 <ul>
   <h3>City Listing</h3>
   {{#each model.cities as |city|}}
-     {{city.name}}<br>
+     {{city.name}}, {{city.country}}<br>
   {{/each}}
 </ul>
 <hr>
 
+{{new-city saveCity="saveCity"}}
 {{new-rental save2="save3"}}
 {{new-announcement announcementSave="announcementSave"}}
 

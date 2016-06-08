@@ -9,6 +9,11 @@ export default Ember.Route.extend({
       });
     },
   actions: {
+    saveCity(params) {
+      var newCity = this.store.createRecord('city', params);
+      newCity.save();
+      this.transitionTo('index');
+    },
     save3(params) {
       var newRental = this.store.createRecord('rental', params);
       newRental.save();
@@ -23,5 +28,6 @@ export default Ember.Route.extend({
       announcement.destroyRecord();
       this.transitionTo('index');
     }
+
   }
 });
