@@ -1,0 +1,12 @@
+{{gobbeldygook.name}}'s Details<br>
+Country: {{gobbeldygook.country}} <br>
+<button {{action 'delete' gobbeldygook}}>Delete {{gobbeldygook.name}}</button><br>
+<hr>
+<p>Rentals available in {{gobbeldygook.name}}:</p>
+<ul>
+  {{#each gobbeldygook.rentals as |rental|}}
+  <li>
+    {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}}{{/link-to}}
+  </li>
+  {{/each}}
+</ul>
